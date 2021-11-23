@@ -4,7 +4,7 @@ MAINTAINER JoseManuel.Gomez6@alu.uclm.es
 
 RUN mkdir -p /usr/local/app
 
-WORKDIR /usr/local/app
+#WORKDIR /usr/local/app
 
 COPY drop/*.jar usr/local/app/
 
