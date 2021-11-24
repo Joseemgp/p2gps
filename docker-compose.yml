@@ -14,7 +14,7 @@ services:
       - "28017"
       - "27017"
     volumes:
-      - "db-data:/data/db"
+      - "db-data:/var/logs/"
   order:
     image: joseemgp/p2gps:order
     depends_on:
@@ -44,3 +44,7 @@ services:
 
 volumes:
   db-data:
+    driver: azure_file
+    driver_opts:
+      share_name: db-data
+      storage_account_name: almacengps
